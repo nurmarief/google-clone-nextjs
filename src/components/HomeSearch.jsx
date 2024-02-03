@@ -43,7 +43,7 @@ export default function HomeSearch() {
             className="focus:outline-none col-span-10"
             onChange={(e) => setInput(e.target.value)}
           />
-          <BsFillMicFill className="justify-self-end text-lg" />
+          <BsFillMicFill className="justify-self-end text-lg cursor-pointer" />
         </div>
       </form>
       <div className="mt-8 flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-4">
