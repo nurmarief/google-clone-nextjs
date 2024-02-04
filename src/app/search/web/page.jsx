@@ -1,3 +1,5 @@
+import WebSearchResults from "@/components/WebSearchResults";
+
 export default async function WebSearchPage({searchParams}) {
   const response = await fetch(`
     https://www.googleapis.com/customsearch/v1?key=${process.env.GOOGLE_DEV_G_CLONE_NEXT_JS_API_KEY}&cx=${process.env.GOOGLE_DEV_G_CLONE_NEXT_JS_CONTEXT_KEY}&q=${searchParams.searchTerm}
@@ -21,10 +23,7 @@ export default async function WebSearchPage({searchParams}) {
   
   return (
     <div className="">
-      { results && results.map(result => (
-          <h1>{result.title}</h1>
-        ))
-      }
+      {results && <WebSearchResults results={data} />}
     </div>
   );
 }
