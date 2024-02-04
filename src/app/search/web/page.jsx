@@ -12,18 +12,18 @@ export default async function WebSearchPage({searchParams}) {
 
   if(!results) {
     return (
-      <div className="pt-12 space-y-8 text-center">
+      <main className="pt-12 space-y-8 text-center">
         <h1 className="text-3xl">
           {`No result found for "${searchParams.searchTerm}"`}
         </h1>
         <p className="text-lg">Try search something else</p>
-      </div>
+      </main>
     )
   }
   
   return (
-    <div className="">
+    <main className="pb-40 sm:pb-24 pr-6 pl-6 sm:pl-10 lg:pl-40 w-full">
       {results && <WebSearchResults results={data} />}
-    </div>
+    </main>
   );
 }
