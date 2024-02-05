@@ -4,6 +4,7 @@ import SearchBox from "./SearchBox";
 import { RiSettings3Line } from "react-icons/ri";
 import { TbGridDots } from "react-icons/tb";
 import SearchHeaderOptions from "./SearchHeaderOptions";
+import {Suspense} from "react";
 
 export default function SearchHeader() {
   return (
@@ -26,7 +27,9 @@ export default function SearchHeader() {
           </button>
         </div>
         <div className="w-full flex-1">
-          <SearchBox />
+          <Suspense>
+            <SearchBox />
+          </Suspense>
         </div>
         <div className="hidden md:inline-flex space-x-2">
           <RiSettings3Line className="rounded-full p-2 bg-transparent hover:bg-gray-200 text-4xl cursor-pointer" />
@@ -37,7 +40,9 @@ export default function SearchHeader() {
         </button>
       </div>
       <div className="pr-6 pl-6 sm:pl-10 lg:pl-40 w-full">
-        <SearchHeaderOptions />
+        <Suspense>
+          <SearchHeaderOptions />
+        </Suspense>
       </div>
     </header>
   );
