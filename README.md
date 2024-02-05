@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Google Clone with NextJs
 
-## Getting Started
+This project is a simple Google clone, built with NextJs and Google Programmable Search Engine API.
 
-First, run the development server:
+## Table of contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Overview](#overview)
+  - [The project](#the-project)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Useful resources](#useful-resources)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Overview
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### The project
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+App features:
 
-## Learn More
+- Search web pages
+- Search images
+- See a loading placeholder when fetching the data
+- See a try again button when fetching error
 
-To learn more about Next.js, take a look at the following resources:
+### Screenshot
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### Mobile Preview
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+![Mobile preview](./results/mobile-preview.png)
 
-## Deploy on Vercel
+#### Desktop preview
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![Desktop preview](./results/desktop-preview.png)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Links
+
+- [Github repo](https://github.com/nurmarief/google-clone-nextjs/)
+- [Live site](https://google-clone-nextjs-blush.vercel.app/)
+
+## My process
+
+### Built with
+
+- NextJs 14
+- Tailwindcss
+- Google Programmable Search Engine API
+
+### What I Learned
+
+- Nextjs pagination: page layout
+- NextJs navigation: useSearchParams, useRouter, usePathname
+- React useful 3rd party package: html-react-parser
+
+### Useful resources
+
+- [Random word API](https://random-word-api.herokuapp.com/home)
