@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <HomeHeader />
-      <div className="mt-24 flex flex-col items-center">
+      <main className="mt-24 flex flex-col items-center">
         <Image
           className="px-4"
           src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
@@ -17,7 +17,7 @@ export default function Home() {
           style={{ height: "auto" }}
         />
         <HomeSearch />
-      </div>
+      </main>
     </>
   );
 }

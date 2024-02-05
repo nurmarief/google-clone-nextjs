@@ -36,7 +36,7 @@ export default function SearchHeader() {
           Sign In
         </button>
       </div>
-      <div className="px-2 sm:px-6">
+      <div className="pr-6 pl-6 sm:pl-10 lg:pl-40 w-full">
         <SearchHeaderOptions />
       </div>
     </header>
