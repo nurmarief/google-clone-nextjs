@@ -1,7 +1,10 @@
 import Link from "next/link";
 import Parser from "html-react-parser";
+import PaginationButtons from "./PaginationButtons";
 
 export default function WebSearchResults({ results }) {
+  const prevPage = results.queries.previousPage;
+  const nextPage = results.queries.nextPage;
   return (
     <div>
       <p className="mb-5 mt-3 text-gray-600 text-sm">
@@ -22,6 +25,7 @@ export default function WebSearchResults({ results }) {
           <p className="text-gray-600">{Parser(result.htmlSnippet)}</p>
         </div>
       ))}
+      <PaginationButtons prevPage={prevPage} nextPage={nextPage} />
     </div>
   );
 }

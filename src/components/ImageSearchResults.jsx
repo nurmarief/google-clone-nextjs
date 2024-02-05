@@ -1,6 +1,9 @@
 import Link from "next/link";
+import PaginationButtons from "./PaginationButtons";
 
 export default function ImageSearchResults({ results }) {
+  const prevPage = results.queries.previousPage;
+  const nextPage = results.queries.nextPage;
   return (
     <div className="mt-4 sm:pb-24 pb-40">
       <div className="px-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 space-x-4">
@@ -27,6 +30,9 @@ export default function ImageSearchResults({ results }) {
             </div>
           </div>
         ))}
+      </div>
+      <div className="px-3">
+          <PaginationButtons prevPage={prevPage} nextPage={nextPage} />
       </div>
     </div>
   );
