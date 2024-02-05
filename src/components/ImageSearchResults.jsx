@@ -1,5 +1,6 @@
 import Link from "next/link";
 import PaginationButtons from "./PaginationButtons";
+import { Suspense } from "react";
 
 export default function ImageSearchResults({ results }) {
   const prevPage = results.queries.previousPage;
@@ -32,7 +33,9 @@ export default function ImageSearchResults({ results }) {
         ))}
       </div>
       <div className="px-3">
-          <PaginationButtons prevPage={prevPage} nextPage={nextPage} />
+          <Suspense>
+            <PaginationButtons prevPage={prevPage} nextPage={nextPage} />
+          </Suspense>
       </div>
     </div>
   );
