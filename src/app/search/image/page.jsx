@@ -3,6 +3,7 @@ import ImageSearchResults from "@/components/ImageSearchResults";
 export default async function ImageSearchPage({searchParams}) {
   const startPage = searchParams.start || "1";
   
+  await new Promise((resolve) => setTimeout(resolve, 2000));
   const response = await fetch(`
     https://www.googleapis.com/customsearch/v1?key=${process.env.GOOGLE_DEV_G_CLONE_NEXT_JS_API_KEY}&cx=${process.env.GOOGLE_DEV_G_CLONE_NEXT_JS_CONTEXT_KEY}&q=${searchParams.searchTerm}&searchType=image&start=${startPage}
   `);
@@ -11,7 +12,7 @@ export default async function ImageSearchPage({searchParams}) {
   
   const data = await response.json();
   const results = data.items;
-  
+
   if(!results) {
     return (
       <main className="pt-12 space-y-8 text-center">
